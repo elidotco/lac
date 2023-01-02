@@ -34,7 +34,6 @@ a {
 }
 
 .portfolio .section-title {
-  position: relative;
   text-align: center;
   font-size: 40px;
   font-weight: 500;
@@ -44,7 +43,7 @@ a {
 }
 .portfolio .section-title::before {
   content: "";
-  position: absolute;
+
   bottom: 0px;
   left: 50%;
   width: 180px;
@@ -54,7 +53,7 @@ a {
 }
 .portfolio .section-title::after {
   content: "Feel the Moment";
-  position: absolute;
+
   bottom: -17px;
   left: 50%;
   font-size: 20px;
@@ -64,12 +63,11 @@ a {
   transform: translateX(-50%);
 }
 .main {
-  position: relative;
   height: 100%;
   width: 100%;
 }
 .main .gallery {
-  position: relative;
+  z-index: -50;
   height: auto;
   width: 90%;
   margin: auto;
@@ -80,7 +78,6 @@ a {
   grid-auto-flow: dense;
 }
 .main .gallery .img {
-  position: relative;
   height: 100%;
   width: 100%;
   overflow: hidden;

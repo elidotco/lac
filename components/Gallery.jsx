@@ -34,8 +34,8 @@ const Gallery = ({ gallery }) => {
     slidesToScroll: 10,
   };
   return (
-    <div className="relative">
-      <section id="portfolio" class="portfolio">
+    <div className="">
+      <section id="portfolio" class="portfolio static">
         <div class="max-width">
           <div className="flex items-center justify-center text-4xl font-bold">
             <h2 class="mx-auto">Gallery</h2>
