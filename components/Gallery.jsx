@@ -10,23 +10,22 @@ import { Tip } from "./Tip";
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
 
-const Gallery = () => {
-  const [gallery, setGallery] = useState([]);
-  useEffect(() => {
-    sanityClient
-      .fetch(
-        `
-   *[_type == "gallery"]{
-     ...,
-   
-     
-   }`
-      )
-      .then((data) => {
-        console.log(data);
-        setGallery(data);
-      });
-  }, []);
+const Gallery = ({ gallery }) => {
+  // const [gallery, setGallery] = useState([]);
+  // useEffect(() => {
+  //   sanityClient
+  //     .fetch(
+  //       `
+  //  *[_type == "gallery"]{
+  //    ...,
+
+  //  }`
+  //     )
+  //     .then((data) => {
+  //       console.log(data);
+  //       setGallery(data);
+  //     });
+  // }, []);
   var settings = {
     dots: true,
     infinite: true,

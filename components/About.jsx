@@ -8,44 +8,7 @@ import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 // ..
 
-const About = () => {
-  const [about, setAbout] = useState([]);
-  useEffect(() => {
-    sanityClient
-      .fetch(
-        `
-   *[_type == "about"]{
-     ...,
-   
-     
-   }`
-      )
-      .then((data) => {
-        console.log(data);
-        setAbout(data);
-      });
-  }, []);
-
-  //   const components = {
-  //     block: {
-  //       // Ex. 1: customizing common block types
-  //       h1: ({ children }) => <h1 className="text-2xl">{children}</h1>,
-  //       blockquote: ({ children }) => (
-  //         <blockquote className="border-l-purple-500">{children}</blockquote>
-  //       ),
-
-  //       // Ex. 2: rendering custom styles
-  //       customHeading: ({ children }) => (
-  //         <h2 className="text-lg text-primary text-purple-700">{children}</h2>
-  //       ),
-  //     },
-  //     undefined: {},
-  //   };
-
-  function blocksToText(bio) {
-    console.log(bio);
-    return bio.children.map((child) => child.text).join("");
-  }
+const About = ({ about }) => {
   return (
     <div>
       <div

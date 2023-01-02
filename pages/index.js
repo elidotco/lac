@@ -1,3 +1,4 @@
+import { groq } from "next-sanity";
 import Head from "next/head";
 import Image from "next/image";
 import { About, Gallery, Hero } from "../components";
@@ -5,9 +6,11 @@ import Contact from "../components/Contact";
 import Header from "../components/Header";
 import Services from "../components/Services";
 import Team from "../components/Team";
+import client from "../sanity";
 import styles from "../styles/Home.module.css";
 
-export default function Home() {
+export default function Home({ about, team, gallery, services }) {
+  console.log(services);
   return (
     <div className="">
       <Head>
@@ -17,13 +20,29 @@ export default function Home() {
       </Head>
       <Header />
       <Hero />
-      <Services />
+      <Services services={services} />
       <div>
-        <About />
+        <About about={about} />
       </div>
-      <Team />
-      <Gallery />
+      <Team team={team} />
+      <Gallery gallery={gallery} />
       <Contact />
     </div>
   );
+}
+
+export async function getStaticProps() {
+  const team = await client.fetch(groq`*[_type == "team"]{
+    ...,
+  
+    
+  }`);
+
+  const about = await client.fetch(groq`*[_type == "about"]{...,}`);
+  const gallery = await client.fetch(groq`*[_type == "gallery"]{...,}`);
+  const services = await client.fetch(groq`*[_type == "services"]{...,}`);
+
+  return {
+    props: { team, about, gallery, services }, // will be passed to the page component as props
+  };
 }

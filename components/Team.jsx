@@ -2,23 +2,7 @@
 import React from "react";
 import sanityClient, { urlFor } from "../sanity";
 import { useState, useEffect } from "react";
-const Team = () => {
-  const [team, setTeam] = useState([]);
-  useEffect(() => {
-    sanityClient
-      .fetch(
-        `
-   *[_type == "team"]{
-     ...,
-   
-     
-   }`
-      )
-      .then((data) => {
-        console.log(data);
-        setTeam(data);
-      });
-  }, []);
+const Team = ({ team }) => {
   return (
     <div
       className="
