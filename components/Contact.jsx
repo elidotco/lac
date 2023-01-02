@@ -13,11 +13,11 @@ import {
 const Contact = () => {
   return (
     <div>
-      <section className="contact px-5" id="contact">
+      <section className="contact  h-full" id="contact">
         <div className="max-width">
           <h2 className="section-title">Contact</h2>
           <div className="contact-content">
-            <div className="column left">
+            <div className="column left mb-56">
               <div className="font-semibold text-3xl">Get in Touch</div>
               <p>
                 LAC Global Limited is an international company engaged in a
@@ -28,7 +28,7 @@ const Contact = () => {
               <div className="icons">
                 <div className="row">
                   <i className="fas fa-user"></i>
-                  <FaUser size={35} color="#228b22" />
+                  <FaUser size={30} color="#228b22" />
                   <div className="info">
                     <div className="head"></div>
                     <div className="sub-title">LAC GLOBAL</div>
@@ -36,7 +36,7 @@ const Contact = () => {
                 </div>
                 <div className="row">
                   <i className="fas fa-map-marker-alt"></i>
-                  <FaMapMarkerAlt size={35} color="#228b22" />
+                  <FaMapMarkerAlt size={30} color="#228b22" />
                   <div className="info">
                     <div className="head">Address</div>
                     <div className="sub-title">
@@ -46,19 +46,18 @@ const Contact = () => {
                 </div>
                 <div className="row">
                   <i className="fas fa-envelope"></i>
-                  <FaEnvelope size={35} color="#228b22" />
+                  <FaEnvelope size={30} color="#228b22" />
                   <div className="info">
                     <div className="head">Email</div>
                     <div className="sub-title">info@lacgloballimited.com</div>
                   </div>
-                  <div className="row">
-                    <i className="fas fa-telephone"></i>
-                    <FaPhone size={35} color="#228b22" />
-                    <div className="info">
-                      <div className="head">Phone</div>
-                      <div className="sub-title">
-                        +44 7888586489 / +49 15205284562 / +233 552682208
-                      </div>
+                </div>
+                <div className="row">
+                  <FaPhone size={30} color="#228b22" />
+                  <div className="info">
+                    <div className="head">Phone</div>
+                    <div className="sub-title">
+                      +44 7888586489 / +49 15205284562 / +233 552682208
                     </div>
                   </div>
                 </div>
