@@ -4,7 +4,7 @@ import Head from "next/head";
 
 import React from "react";
 import { Crumb, Header } from "../components";
-import Contact from "../components/Contact";
+import Contact from "  ../components/Contact";
 import client, { urlFor } from "../sanity";
 
 const about = ({ logo, about }) => {
