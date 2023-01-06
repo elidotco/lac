@@ -12,12 +12,12 @@ import {
 
 const Contact = () => {
   return (
-    <div>
-      <section className="contact  h-full" id="contact">
+    <div className="">
+      <section className="contact  h-full md:px-5 px-2" id="contact">
         <div className="max-width">
           <h2 className="section-title">Contact</h2>
           <div className="contact-content">
-            <div className="column left mb-56">
+            <div className="column left mb-56 md:mb-2">
               <div className="font-semibold text-3xl">Get in Touch</div>
               <p>
                 LAC Global Limited is an international company engaged in a

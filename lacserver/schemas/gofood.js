@@ -1,8 +1,8 @@
 import {defineField, defineType} from 'sanity'
 
 export default defineType({
-  name: 'about',
-  title: 'About',
+  name: 'gofood',
+  title: 'Gofood',
   type: 'document',
   fields: [
     // defineField({
@@ -19,17 +19,10 @@ export default defineType({
     //     maxLength: 96,
     //   },
     // }),
+
     defineField({
-      name: 'image',
-      title: 'Image',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
-    }),
-    defineField({
-      name: 'bio',
-      title: 'Bio',
+      name: 'rsc',
+      title: 'Resturant Contions',
       type: 'array',
       of: [
         {
@@ -41,8 +34,8 @@ export default defineType({
       ],
     }),
     defineField({
-      name: 'complete_bio',
-      title: 'Complete BBio',
+      name: 'cusc',
+      title: 'Customer conditions',
       type: 'array',
       of: [
         {
@@ -52,12 +45,34 @@ export default defineType({
           lists: [],
         },
       ],
+    }),
+    defineField({
+      name: 'intro',
+      title: 'Introduction',
+      type: 'array',
+      of: [
+        {
+          title: 'Block',
+          type: 'block',
+          styles: [{title: 'Normal', value: 'normal'}],
+          lists: [],
+        },
+      ],
+    }),
+    defineField({
+      name: 'facebook',
+      title: 'Facebook link',
+      type: 'string',
+    }),
+    defineField({
+      name: 'instagram',
+      title: 'instagram Link',
+      type: 'string',
+    }),
+    defineField({
+      name: 'twitter',
+      title: 'Twitter Link',
+      type: 'string',
     }),
   ],
-  preview: {
-    select: {
-      title: 'name',
-      media: 'image',
-    },
-  },
 })

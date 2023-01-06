@@ -1,13 +1,12 @@
 import { groq } from "next-sanity";
 import Head from "next/head";
 import Image from "next/image";
-import { About, Gallery, Hero } from "../components";
-import Contact from "../components/Contact";
-import Header from "../components/Header";
-import Services from "../components/Services";
-import Team from "../components/Team";
-import client from "../sanity";
-import styles from "../styles/Home.module.css";
+import { About, Gallery, Hero } from "../../components";
+import Contact from "../../components/Contact";
+import Header from "../../components/Header";
+import Services from "../../components/Services";
+import Team from "../../components/Team";
+import client from "../../sanity";
 
 export default function Home({ about, team, gallery, services, logo }) {
   console.log(services);

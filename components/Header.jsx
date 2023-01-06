@@ -1,14 +1,18 @@
+/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
+import Image from "next/Image";
 import React, { Fragment, useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Dialog, Transition } from "@headlessui/react";
-const Header = () => {
+import { urlFor } from "../sanity";
+const Header = ({ logo }) => {
   const [isOpen, setIsOpen] = useState(false);
   const menu = [
     { name: "Home", path: "/" },
     { name: "About Us", path: "/about" },
-    { name: "Services", path: "/" },
-    { name: "Team", path: "/.team" },
+    { name: "Services", path: "/services" },
+
+    { name: "Current Operations", path: "/projects" },
     { name: "Contact", path: "/contact" },
   ];
 
@@ -20,14 +24,27 @@ const Header = () => {
     setIsOpen(true);
   }
   return (
-    <div>
-      <div className="hidden md:flex w-full h-16 items-center z-50 justify-around bg-[#228b22] sticky">
-        <ul className="flex flex-row gap-4">
+    <div className="sticky">
+      <div className="hidden  md:flex w-full h-24 items-center z-50 justify-around bg-[#ffffff] shadow-sm shadow-gray-200 fixed ">
+        <div>
+          {logo.map((l, i) => {
+            return (
+              <img
+                key={i}
+                src={urlFor(l.mainImage).url()}
+                alt={l.title}
+                height={50}
+                width={50}
+              />
+            );
+          })}
+        </div>
+        <ul className="flex flex-row gap-4 text-[#228b22] ">
           {menu.map((item) => (
             <li key={item.name}>
               <Link legacyBehavior prefetch={false} href={item.path}>
                 <a
-                  className="text-lg px-4 font-semibold text-white"
+                  className="text-lg px-4 font-semibold hover:text-black hover:transition-all hover:duration-500  text-[20px] transition-all duration-400 font-sm"
                   href={item.path}
                 >
                   {item.name}
@@ -36,6 +53,14 @@ const Header = () => {
             </li>
           ))}
         </ul>
+
+        <div>
+          <Link href="/about">
+            <div className="w-28 flex items-center justify-around px-1 py-1 h-14  text-white rounded-full bg-[#228b22] hover:bg-black hover:transition-all hover:duration-150 transition duration-200">
+              Feedback
+            </div>
+          </Link>
+        </div>
       </div>
       <div className="w-full h-16 md:hidden items-center bg-[#228b22] fixed">
         <div className="flex items-center justify-between px-4 h-full relative">
@@ -136,5 +161,13 @@ const Header = () => {
     </div>
   );
 };
+
+export async function getStaticProps() {
+  const logo = await client.fetch(groq`*[_type == "logo"]{...,}`);
+
+  return {
+    props: { logo }, // will be passed to the page component as props
+  };
+}
 
 export default Header;

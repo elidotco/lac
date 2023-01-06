@@ -10,6 +10,11 @@ export default defineType({
       title: 'content',
       type: 'string',
     }),
+    defineField({
+      name: 'full content',
+      title: 'full content',
+      type: 'string',
+    }),
 
     defineField({
       name: 'mainImage',

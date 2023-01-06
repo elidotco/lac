@@ -15,7 +15,7 @@ a {
   text-decoration: none;
 }
 .hero {
-  background: url("../public/pexels-pixabay-53594.jpg") no-repeat center;
+  background: url("../public/Home - Picture.jpg") no-repeat center;
   background-size: cover;
 }
 
@@ -116,7 +116,6 @@ a {
 }
 
 .contact .section-title {
-  position: relative;
   text-align: center;
   font-size: 40px;
   font-weight: 500;
@@ -126,7 +125,7 @@ a {
 }
 .contact .section-title::before {
   content: "";
-  position: absolute;
+
   bottom: 0px;
   left: 50%;
   width: 180px;
@@ -135,8 +134,6 @@ a {
   transform: translateX(-50%);
 }
 .contact .section-title::after {
-  content: "Get in Touch";
-  position: absolute;
   bottom: -17px;
   left: 50%;
   font-size: 20px;
@@ -481,4 +478,10 @@ a > i:hover {
 .socials {
   display: flex;
   justify-content: center;
+}
+
+.crumb {
+  background: url("../images/pexels-henry-&-co-1939485.jpg") no-repeat center
+    top;
+  background-size: cover;
 }
