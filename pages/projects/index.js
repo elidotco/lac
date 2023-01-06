@@ -1,6 +1,6 @@
 import { groq } from "next-sanity";
 import Head from "next/head";
-import Image from "next/image";
+import Image from "next/Image";
 import { About, Gallery, Hero } from "../../components";
 import Contact from "../../components/Contact";
 import Header from "../../components/Header";
