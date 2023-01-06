@@ -4,17 +4,20 @@ import { Header } from "../components";
 import Contact from "../components/Contact";
 import client from "../sanity";
 
-const contact = () => {
+const contact = ({ logo }) => {
   return (
     <div>
-      <Header />
+      <Header logo={logo} />
       <Contact />
     </div>
   );
 };
 
 export async function getStaticProps() {
-  const logo = await client.fetch(groq`*[_type == "logo"]{...,}`);
+  const logo = await client.fetch(
+    groq`*[_type == "logo"]
+  {...,}`
+  );
 
   return {
     props: { logo }, // will be passed to the page component as props
