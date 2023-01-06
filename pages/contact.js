@@ -14,7 +14,7 @@ const contact = () => {
 };
 
 export async function getStaticProps() {
-  const logo = await clientt.fetch(groq`*[_type == "logo"]{...,}`);
+  const logo = await client.fetch(groq`*[_type == "logo"]{...,}`);
 
   return {
     props: { logo }, // will be passed to the page component as props
