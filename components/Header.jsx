@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
-import Image from "next/Image";
+
 import React, { Fragment, useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Dialog, Transition } from "@headlessui/react";
@@ -29,7 +29,7 @@ const Header = ({ logo }) => {
         <div>
           {logo.map((l, i) => {
             return (
-              <Image
+              <img
                 key={i}
                 src={urlFor(l.mainImage).url()}
                 alt={l.title}

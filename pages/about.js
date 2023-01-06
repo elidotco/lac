@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { groq } from "next-sanity";
 import Head from "next/head";
-import Image from "next/Image";
+
 import React from "react";
 import { Crumb, Header } from "../components";
 import Contact from "../components/Contact";
