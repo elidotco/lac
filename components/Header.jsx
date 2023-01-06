@@ -29,7 +29,7 @@ const Header = ({ logo }) => {
         <div>
           {logo.map((l, i) => {
             return (
-              <img
+              <Image
                 key={i}
                 src={urlFor(l.mainImage).url()}
                 alt={l.title}
