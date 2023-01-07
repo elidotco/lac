@@ -5,27 +5,9 @@ import { useState } from "react";
 import Slider from "react-slick";
 import sanityClient, { urlFor } from "../sanity";
 import { Tip } from "./Tip";
+import $ from "jquery";
 
-// Import css files
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
-
-const Gallery = ({ gallery }) => {
-  // const [gallery, setGallery] = useState([]);
-  // useEffect(() => {
-  //   sanityClient
-  //     .fetch(
-  //       `
-  //  *[_type == "gallery"]{
-  //    ...,
-
-  //  }`
-  //     )
-  //     .then((data) => {
-  //       console.log(data);
-  //       setGallery(data);
-  //     });
-  // }, []);
+function Gallery({ gallery }) {
   var settings = {
     dots: true,
     infinite: true,
@@ -57,97 +39,96 @@ const Gallery = ({ gallery }) => {
               })}
 
               {/* <div class="img">
-                <a href="assest/images/WhatsApp Image 2022-04-03 at 6.45.39 AM.jpeg">
-                  <img
-                    src="assest/images/WhatsApp Image 2022-04-03 at 6.45.39 AM.jpeg"
-                    class="image"
-                    alt=""
-                  />
-                </a>
-              </div>
-              <div class="img">
-                <a href="assest/images/gowaste.jpg">
-                  <img src="assest/images/gowaste.jpg" class="image" alt="" />
-                </a>
-              </div>
-              <div class="img">
-                <a href="assest/images/gowaste.jpg">
-                  <img src="assest/images/gowaste.jpg" class="image" alt="" />
-                </a>
-              </div>
-              <div class="img">
-                <a href="assest/images/image1 (3).jpeg">
-                  <img
-                    src="assest/images/image1 (3).jpeg"
-                    class="image"
-                    alt=""
-                  />
-                </a>
-              </div>
-              <div class="img">
-                <a href="assest/images/image1 (4).jpeg">
-                  <img
-                    src="assest/images/image1 (4).jpeg"
-                    class="image"
-                    alt=""
-                  />
-                </a>
-              </div>
-              <div class="img">
-                <a href="assest/images/image1 (5).jpeg">
-                  <img
-                    src="assest/images/image1 (5).jpeg"
-                    class="image"
-                    alt=""
-                  />
-                </a>
-              </div>
-              <div class="img">
-                <a href="assest/images/image1 (6).jpeg">
-                  <img
-                    src="assest/images/image1 (6).jpeg"
-                    class="image"
-                    alt=""
-                  />
-                </a>
-              </div>
-              <div class="img">
-                <a href="assest/images/gallery.jpeg">
-                  <img src="assest/images/gallery.jpeg" class="image" alt="" />
-                </a>
-              </div>
-              <div class="img">
-                <a href="assest/images/gallery1.jpeg">
-                  <img src="assest/images/gallery1.jpeg" class="image" alt="" />
-                </a>
-              </div>
-              <div class="img">
-                <a href="assest/images/gallery2.jpeg">
-                  <img src="assest/images/gallery2.jpeg" class="image" alt="" />
-                </a>
-              </div>
-              <div class="img">
-                <a href="assest/images/gallery3.jpeg">
-                  <img src="assest/images/gallery3.jpeg" class="image" alt="" />
-                </a>
-              </div>
-              <div class="img">
-                <a href="assest/images/galley4.jpeg">
-                  <img src="assest/images/galley4.jpeg" class="image" alt="" />
-                </a>
-              </div>
-              <div class="img">
-                <a href="assest/images/gallery5.jpeg">
-                  <img src="assest/images/gallery5.jpeg" class="image" alt="" />
-                </a>
-              </div> */}
+              <a href="assest/images/WhatsApp Image 2022-04-03 at 6.45.39 AM.jpeg">
+                <img
+                  src="assest/images/WhatsApp Image 2022-04-03 at 6.45.39 AM.jpeg"
+                  class="image"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="img">
+              <a href="assest/images/gowaste.jpg">
+                <img src="assest/images/gowaste.jpg" class="image" alt="" />
+              </a>
+            </div>
+            <div class="img">
+              <a href="assest/images/gowaste.jpg">
+                <img src="assest/images/gowaste.jpg" class="image" alt="" />
+              </a>
+            </div>
+            <div class="img">
+              <a href="assest/images/image1 (3).jpeg">
+                <img
+                  src="assest/images/image1 (3).jpeg"
+                  class="image"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="img">
+              <a href="assest/images/image1 (4).jpeg">
+                <img
+                  src="assest/images/image1 (4).jpeg"
+                  class="image"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="img">
+              <a href="assest/images/image1 (5).jpeg">
+                <img
+                  src="assest/images/image1 (5).jpeg"
+                  class="image"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="img">
+              <a href="assest/images/image1 (6).jpeg">
+                <img
+                  src="assest/images/image1 (6).jpeg"
+                  class="image"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="img">
+              <a href="assest/images/gallery.jpeg">
+                <img src="assest/images/gallery.jpeg" class="image" alt="" />
+              </a>
+            </div>
+            <div class="img">
+              <a href="assest/images/gallery1.jpeg">
+                <img src="assest/images/gallery1.jpeg" class="image" alt="" />
+              </a>
+            </div>
+            <div class="img">
+              <a href="assest/images/gallery2.jpeg">
+                <img src="assest/images/gallery2.jpeg" class="image" alt="" />
+              </a>
+            </div>
+            <div class="img">
+              <a href="assest/images/gallery3.jpeg">
+                <img src="assest/images/gallery3.jpeg" class="image" alt="" />
+              </a>
+            </div>
+            <div class="img">
+              <a href="assest/images/galley4.jpeg">
+                <img src="assest/images/galley4.jpeg" class="image" alt="" />
+              </a>
+            </div>
+            <div class="img">
+              <a href="assest/images/gallery5.jpeg">
+                <img src="assest/images/gallery5.jpeg" class="image" alt="" />
+              </a>
+            </div> */}
             </div>
           </div>
         </div>
       </section>
     </div>
   );
-};
+}
 
 export default Gallery;
-

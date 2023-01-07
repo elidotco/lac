@@ -5,7 +5,7 @@ import { BsArrowRight } from "react-icons/bs";
 const Services = ({ services }) => {
   return (
     <div className=" py-10 px-10">
-      <div className="flex items-center lg:justify-between lg:px-14">
+      <div className="flex items-center lg:justify-between flex-col md:flex-row lg:px-14">
         <h1 className="text-6xl text-[#228b22] px-4 font-bold">Services</h1>
         <div className="flex items-center justify-center">
           <Link href="/services">

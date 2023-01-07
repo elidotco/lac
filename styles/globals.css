@@ -485,3 +485,8 @@ a > i:hover {
     top;
   background-size: cover;
 }
+
+.ab {
+  background: url("../images/kindpng_2371279.png") no-repeat center top;
+  background-size: cover;
+}

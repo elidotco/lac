@@ -10,7 +10,7 @@ import "aos/dist/aos.css"; // You can also use <link> for styles
 
 const About = ({ about }) => {
   return (
-    <div>
+    <div className="ab">
       <div
         className="flex items-center
        justify-center"
@@ -29,7 +29,7 @@ const About = ({ about }) => {
                 className="h-96   top w-full"
               />
             </div>
-            <div className="w-full h-full static  ">
+            <div className="w-full h-full static bg-white shadow-md shadow-gray-400 px-5 py-5  rounded-lg ">
               <div className="text-xl font-semibold">
                 <p>{item.bio[0].children[0].text}</p>
               </div>
