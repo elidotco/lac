@@ -23,6 +23,7 @@
     "react-animate-on-scroll": "^2.1.5",
     "react-dom": "18.2.0",
     "react-icons": "^4.7.1",
+    "react-scroll-to-top": "^3.0.0",
     "react-slick": "^0.29.0",
     "react-typed": "^1.2.0"
   },

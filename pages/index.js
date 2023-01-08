@@ -7,16 +7,18 @@ import Header from "../components/Header";
 import Services from "../components/Services";
 import Team from "../components/Team";
 import client from "../sanity";
-import styles from "../styles/Home.module.css";
+
+import ScrollToTop from "react-scroll-to-top";
 
 export default function Home({ about, team, gallery, services, logo }) {
-  console.log(services);
   return (
     <div className="">
+      <ScrollToTop smooth className="sc" />
       <Head>
         <title>Lac Global Limited || Home</title>
         <meta name="description" content="lac global" />
         <link rel="icon" href="/favicon.ico" />
+        <meta name="language" content="en" />
       </Head>
       <Header logo={logo} />
       <Hero />

@@ -74,5 +74,15 @@ export default defineType({
       title: 'Twitter Link',
       type: 'string',
     }),
+    defineField({
+      name: 'playstore',
+      title: 'Playstore Link',
+      type: 'string',
+    }),
+    defineField({
+      name: 'appstore',
+      title: 'App Store Link',
+      type: 'string',
+    }),
   ],
 })

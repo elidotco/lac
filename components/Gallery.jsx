@@ -8,13 +8,6 @@ import { Tip } from "./Tip";
 import $ from "jquery";
 
 function Gallery({ gallery }) {
-  var settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 10,
-  };
   return (
     <div className="">
       <section id="portfolio" class="portfolio ">
@@ -37,92 +30,6 @@ function Gallery({ gallery }) {
                   </div>
                 );
               })}
-
-              {/* <div class="img">
-              <a href="assest/images/WhatsApp Image 2022-04-03 at 6.45.39 AM.jpeg">
-                <img
-                  src="assest/images/WhatsApp Image 2022-04-03 at 6.45.39 AM.jpeg"
-                  class="image"
-                  alt=""
-                />
-              </a>
-            </div>
-            <div class="img">
-              <a href="assest/images/gowaste.jpg">
-                <img src="assest/images/gowaste.jpg" class="image" alt="" />
-              </a>
-            </div>
-            <div class="img">
-              <a href="assest/images/gowaste.jpg">
-                <img src="assest/images/gowaste.jpg" class="image" alt="" />
-              </a>
-            </div>
-            <div class="img">
-              <a href="assest/images/image1 (3).jpeg">
-                <img
-                  src="assest/images/image1 (3).jpeg"
-                  class="image"
-                  alt=""
-                />
-              </a>
-            </div>
-            <div class="img">
-              <a href="assest/images/image1 (4).jpeg">
-                <img
-                  src="assest/images/image1 (4).jpeg"
-                  class="image"
-                  alt=""
-                />
-              </a>
-            </div>
-            <div class="img">
-              <a href="assest/images/image1 (5).jpeg">
-                <img
-                  src="assest/images/image1 (5).jpeg"
-                  class="image"
-                  alt=""
-                />
-              </a>
-            </div>
-            <div class="img">
-              <a href="assest/images/image1 (6).jpeg">
-                <img
-                  src="assest/images/image1 (6).jpeg"
-                  class="image"
-                  alt=""
-                />
-              </a>
-            </div>
-            <div class="img">
-              <a href="assest/images/gallery.jpeg">
-                <img src="assest/images/gallery.jpeg" class="image" alt="" />
-              </a>
-            </div>
-            <div class="img">
-              <a href="assest/images/gallery1.jpeg">
-                <img src="assest/images/gallery1.jpeg" class="image" alt="" />
-              </a>
-            </div>
-            <div class="img">
-              <a href="assest/images/gallery2.jpeg">
-                <img src="assest/images/gallery2.jpeg" class="image" alt="" />
-              </a>
-            </div>
-            <div class="img">
-              <a href="assest/images/gallery3.jpeg">
-                <img src="assest/images/gallery3.jpeg" class="image" alt="" />
-              </a>
-            </div>
-            <div class="img">
-              <a href="assest/images/galley4.jpeg">
-                <img src="assest/images/galley4.jpeg" class="image" alt="" />
-              </a>
-            </div>
-            <div class="img">
-              <a href="assest/images/gallery5.jpeg">
-                <img src="assest/images/gallery5.jpeg" class="image" alt="" />
-              </a>
-            </div> */}
             </div>
           </div>
         </div>

@@ -6,10 +6,12 @@ import React from "react";
 import { Crumb, Header } from "../components";
 import Contact from "../components/Contact";
 import client, { urlFor } from "../sanity";
+import ScrollToTop from "react-scroll-to-top";
 
 const about = ({ logo, about }) => {
   return (
     <div>
+      <ScrollToTop smooth className="sc" />
       <Head>
         <title>Lac Global Limited || About us</title>
         <meta name="description" content="lac global" />
