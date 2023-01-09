@@ -23,7 +23,7 @@ export default function Home({
       <Header logo={logo} />
       <Crumb name="GoFood Terms and Conditions" />
       <div>
-        <div className="px-10 ">
+        <div className="lg:px-10 px-5 ">
           {gofood.map((i, index) => (
             <div key={index}>
               <div className="bg-white text-black p-5 my-10 shadow-lg shadow-gray-400 text-xl space-x-5">
@@ -32,7 +32,7 @@ export default function Home({
                 </p>
                 <p>{i.cusc[0].children[4].text}</p>
               </div>
-              <div className="bg-white my-10 p-5 shadow-lg shadow-gray-400 text-xl space-x-5">
+              <div className="bg-white my-10 p-5  text-black shadow-lg shadow-gray-400 text-xl space-x-5">
                 <p className="text-3xl font-bold py-5">
                   Resturantant Terms and Conditions
                 </p>

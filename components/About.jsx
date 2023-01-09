@@ -29,7 +29,7 @@ const About = ({ about }) => {
               <img
                 src={urlFor(item.image).url()}
                 alt="image"
-                className="h-[500px]   top w-full"
+                className="h-[500px]  my-5  top w-full"
               />
             </div>
             <div className="w-full h-full static bg-white shadow-md shadow-gray-400 px-5 py-5  rounded-lg ">
