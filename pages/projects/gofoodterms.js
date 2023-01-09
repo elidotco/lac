@@ -26,7 +26,7 @@ export default function Home({
         <div className="px-10">
           {gofood.map((i, index) => (
             <div key={index}>
-              <div className="bg-white p-5 my-10 shadow-lg shadow-gray-400 text-xl space-x-5">
+              <div className="bg-white text-black p-5 my-10 shadow-lg shadow-gray-400 text-xl space-x-5">
                 <p className="text-3xl font-bold py-5">
                   User Terms and Conditions
                 </p>

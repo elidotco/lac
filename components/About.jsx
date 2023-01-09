@@ -33,7 +33,7 @@ const About = ({ about }) => {
               />
             </div>
             <div className="w-full h-full static bg-white shadow-md shadow-gray-400 px-5 py-5  rounded-lg ">
-              <div className="text-xl font-semibold">
+              <div className="text-xl text-black font-semibold">
                 <p>{item.bio[0].children[0].text}</p>
               </div>
             </div>

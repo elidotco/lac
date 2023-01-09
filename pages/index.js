@@ -26,7 +26,7 @@ export default function Home({ about, team, gallery, services, logo }) {
       <div>
         <About about={about} />
       </div>
-      <Team team={team} />
+      // <Team team={team} />
       <Gallery gallery={gallery} />
       <Contact />
     </div>

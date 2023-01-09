@@ -20,17 +20,17 @@ export default function Home({ logo, gowaste }) {
       <Header logo={logo} />
       <Crumb name="GoFood Terms and Conditions" />
       <div>
-        <div className="px-10">
+        <div className="px-10 text-black">
           {gowaste.map((i, index) => (
             <div key={index}>
-              <div className="bg-white p-5 my-10 shadow-lg shadow-gray-400 text-xl space-x-5">
+              <div className="bg-white text-black p-5 my-10 shadow-lg shadow-gray-400 text-xl space-x-5">
                 <p className="text-3xl font-bold py-5">
                   User Terms and Conditions
                 </p>
                 <p>{i.cusc[0].children[0].text}</p>
               </div>
-              <div className="bg-white my-10 p-5 shadow-lg shadow-gray-400 text-xl space-x-5">
-                <p className="text-3xl font-bold py-5">
+              <div className="bg-white my-10 p-5 text-black shadow-lg shadow-gray-400 text-xl space-x-5">
+                <p className="text-3xl text-black font-bold py-5">
                   Driver Terms and Conditions
                 </p>
                 <p>
