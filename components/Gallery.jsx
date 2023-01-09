@@ -1,11 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
-import { useEffect } from "react";
-import { useState } from "react";
-import Slider from "react-slick";
-import sanityClient, { urlFor } from "../sanity";
-import { Tip } from "./Tip";
-import $ from "jquery";
+
+import { urlFor } from "../sanity";
 
 function Gallery({ gallery }) {
   return (

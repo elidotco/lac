@@ -21,7 +21,10 @@ const About = ({ about }) => {
       </div>
       <div className="flex flex-row px-10 md:flex-nowrap flex-wrap items-center mb-10 shadow-sm shadow-gray-500 p-10 gap-x-11 justify-center">
         {about.map((item, index) => (
-          <div key={index}>
+          <div
+            key={index}
+            className="flex flex-row px-10 md:flex-nowrap flex-wrap items-center mb-10 shadow-sm shadow-gray-500 p-10 gap-x-11 justify-center"
+          >
             <div className="md:w-3/5 w-full">
               <img
                 src={urlFor(item.image).url()}

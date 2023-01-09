@@ -1,23 +1,17 @@
 import { groq } from "next-sanity";
 import Head from "next/head";
-import Image from "next/image";
-import { About, Crumb, Gallery, Hero } from "../../components";
+
+import { Crumb } from "../../components";
 import Contact from "../../components/Contact";
 import Header from "../../components/Header";
-import Services from "../../components/Services";
-import Team from "../../components/Team";
+
 import client from "../../sanity";
 import ScrollToTop from "react-scroll-to-top";
 
-import { FaGooglePlay, FaAppStore } from "react-icons/fa";
-
 export default function Home({
-  services,
   logo,
-  gowaste,
-  gowastepics,
+
   gofood,
-  gofoodpics,
 }) {
   return (
     <div className="">
@@ -56,18 +50,13 @@ export default function Home({
 
 export async function getStaticProps() {
   const logo = await client.fetch(groq`*[_type == "logo"]{...,}`);
-  const gowaste = await client.fetch(groq`*[_type == "gowaste"]{...,}`);
   const gofood = await client.fetch(groq`*[_type == "gofood"]{...,}`);
-  const gowastepics = await client.fetch(groq`*[_type == "gowastepics"]{...,}`);
-  const gofoodpics = await client.fetch(groq`*[_type == "gofoodpics"]{...,}`);
 
   return {
     props: {
       logo,
-      gowaste,
-      gowastepics,
+
       gofood,
-      gofoodpics,
     }, // will be passed to the page component as props
   };
 }

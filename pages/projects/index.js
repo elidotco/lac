@@ -4,15 +4,13 @@ import Image from "next/image";
 import { About, Crumb, Gallery, Hero } from "../../components";
 import Contact from "../../components/Contact";
 import Header from "../../components/Header";
-import Services from "../../components/Services";
-import Team from "../../components/Team";
+
 import client from "../../sanity";
 import { FaGooglePlay, FaAppStore } from "react-icons/fa";
 import Link from "next/link";
 import ScrollToTop from "react-scroll-to-top";
 
 export default function Home({
-  services,
   logo,
   gowaste,
   gowastepics,
@@ -21,6 +19,7 @@ export default function Home({
 }) {
   return (
     <div className="">
+      <ScrollToTop smooth className="sc" />
       <Head>
         <title>Lac Global Limited || Current Operations</title>
         <meta name="description" content="lac global" />
