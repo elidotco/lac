@@ -73,7 +73,7 @@ export default function Home({
             ))}
           </div>
         </div>
-        <div className="px-10">
+        <div className=" px-2 md:px-10">
           <p className="text-5xl font-bold text-green-500 capitalize py-5">
             Introducing Go Food
           </p>
@@ -107,7 +107,7 @@ export default function Home({
           {gofood.map((i, index) => (
             <div
               key={index}
-              className="bg-white p-5 shadow-lg shadow-gray-400 text-xl space-x-5"
+              className="bg-white p-5 shadow-lg text-black shadow-gray-400 text-xl space-x-5"
             >
               <p className="text-3xl font-bold py-5">
                 User Terms and Conditions
