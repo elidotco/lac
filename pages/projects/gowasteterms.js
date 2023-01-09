@@ -20,7 +20,7 @@ export default function Home({ logo, gowaste }) {
       <Header logo={logo} />
       <Crumb name="GoFood Terms and Conditions" />
       <div>
-        <div className="px-10 text-black">
+        <div className="px-5 text-black">
           {gowaste.map((i, index) => (
             <div key={index}>
               <div className="bg-white text-black p-5 my-10 shadow-lg shadow-gray-400 text-xl space-x-5">
