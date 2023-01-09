@@ -28,7 +28,7 @@ export default function Home({
       <Header logo={logo} />
       <Crumb name="Current Operations" />
       <div className="md:px-10 px-4">
-        <div className="px-5 lg:px-10 py-10">
+        <div className=" lg:px-10 py-10">
           <p className="text-5xl text-green-500 capitalize py-5">
             Introducing Go Waste
           </p>
@@ -50,7 +50,7 @@ export default function Home({
                   </a>
                 </div>
                 <div className="text-green-500 underline">
-                  <Link href="/projects/wasteterms">
+                  <Link href="/projects/gowasteterms">
                     view the terms and conditions
                   </Link>
                 </div>
