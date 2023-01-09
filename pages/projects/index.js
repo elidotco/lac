@@ -80,7 +80,7 @@ export default function Home({
           {gofood.map((i, index) => (
             <div
               key={index}
-              className="bg-white p-5 shadow-lg shadow-gray-400 text-xl space-x-5"
+              className="bg-white p-5 shadow-lg text-black shadow-gray-400 text-xl space-x-5"
             >
               <p>{i.intro[0].children[0].text}</p>
               <div className="flex flex-row gap-5 py-5 px-5 items-center justify-center text-xl">
