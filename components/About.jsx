@@ -25,11 +25,11 @@ const About = ({ about }) => {
             key={index}
             className="flex flex-row px-10 md:flex-nowrap flex-wrap items-center mb-10 shadow-sm shadow-gray-500 p-10 gap-x-11 justify-center"
           >
-            <div className="md:w-3/5 w-full">
+            <div className="md:w-4/5 w-full">
               <img
                 src={urlFor(item.image).url()}
                 alt="image"
-                className="h-96   top w-full"
+                className="h-[500px]   top w-full"
               />
             </div>
             <div className="w-full h-full static bg-white shadow-md shadow-gray-400 px-5 py-5  rounded-lg ">

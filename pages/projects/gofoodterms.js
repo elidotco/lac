@@ -23,7 +23,7 @@ export default function Home({
       <Header logo={logo} />
       <Crumb name="GoFood Terms and Conditions" />
       <div>
-        <div className="px-10">
+        <div className="px-10 mx-10">
           {gofood.map((i, index) => (
             <div key={index}>
               <div className="bg-white text-black p-5 my-10 shadow-lg shadow-gray-400 text-xl space-x-5">

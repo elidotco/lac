@@ -45,11 +45,11 @@ const about = ({ logo, about }) => {
                   <p>{item.bio[0].children[0].text}</p>
                 </div>
               </div>
-              <div key={index} className="md:w-3/5 w-full">
+              <div key={index} className="md:w-4/5 w-full">
                 <img
                   src={urlFor(item.image).url()}
                   alt="image"
-                  className="h-96   top w-full"
+                  className="h-full  top w-full"
                 />
               </div>
             </>

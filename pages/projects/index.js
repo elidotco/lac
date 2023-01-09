@@ -27,7 +27,7 @@ export default function Home({
       </Head>
       <Header logo={logo} />
       <Crumb name="Current Operations" />
-      <div>
+      <div className="md:px-10 px-4">
         <div className="px-5 lg:px-10 py-10">
           <p className="text-5xl text-green-500 capitalize py-5">
             Introducing Go Waste
