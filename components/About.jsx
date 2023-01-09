@@ -23,7 +23,7 @@ const About = ({ about }) => {
         {about.map((item, index) => (
           <div
             key={index}
-            className="flex flex-row px-10 md:flex-nowrap flex-wrap items-center mb-10 shadow-sm shadow-gray-500 p-10 gap-x-11 justify-center"
+            className="flex flex-row px-10 md:flex-nowrap flex-wrap items-center mb-10 shadow-sm shadow-gray-500 gap-x-11 justify-center"
           >
             <div className="md:w-4/5 w-full">
               <img
