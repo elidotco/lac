@@ -47,6 +47,19 @@ export default defineType({
       ],
     }),
     defineField({
+      name: 'csc',
+      title: 'Courier conditions',
+      type: 'array',
+      of: [
+        {
+          title: 'Block',
+          type: 'block',
+          styles: [{title: 'Normal', value: 'normal'}],
+          lists: [],
+        },
+      ],
+    }),
+    defineField({
       name: 'intro',
       title: 'Introduction',
       type: 'array',

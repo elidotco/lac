@@ -58,6 +58,13 @@ export default function Home({
 
                 <PortableText value={i.rsc} components={ptComponents} />
               </div>
+              <div className="bg-white my-10 p-5  text-black shadow-lg shadow-gray-400 text-2xl  items-center justify-center flex flex-col">
+                <p className="text-5xl font-bold w-full py-5">
+                  Courier Terms and Conditions
+                </p>
+
+                <PortableText value={i.csc} components={ptComponents} />
+              </div>
             </div>
           ))}
         </div>
