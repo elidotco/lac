@@ -44,6 +44,12 @@ export default function Home({
         <div className="lg:px-10 px-5 ">
           {gofood.map((i, index) => (
             <div key={index}>
+              <div className="bg-white my-10 p-5  text-black shadow-lg shadow-gray-400 text-2xl  items-center justify-center flex flex-col">
+                <p className="text-5xl font-bold w-full py-5">
+                  Courier Terms and Conditions
+                </p>
+                <PortableText value={i.csc} components={ptComponents} />
+              </div>
               <div className="bg-white text-black p-5 my-10 shadow-lg shadow-gray-400 text-2xl space-x-5">
                 <p className="text-5xl font-bold py-5">
                   User Terms and Conditions
@@ -57,12 +63,6 @@ export default function Home({
                 </p>
 
                 <PortableText value={i.rsc} components={ptComponents} />
-              </div>
-              <div className="bg-white my-10 p-5  text-black shadow-lg shadow-gray-400 text-2xl  items-center justify-center flex flex-col">
-                <p className="text-5xl font-bold w-full py-5">
-                  Courier Terms and Conditions
-                </p>
-                <PortableText value={i.csc} components={ptComponents} />
               </div>
             </div>
           ))}
