@@ -62,7 +62,6 @@ export default function Home({
                 <p className="text-5xl font-bold w-full py-5">
                   Courier Terms and Conditions
                 </p>
-
                 <PortableText value={i.csc} components={ptComponents} />
               </div>
             </div>
