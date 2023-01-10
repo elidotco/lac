@@ -49,7 +49,7 @@ export default function Home({
                     <FaAppStore size={35} color="green" />
                   </a>
                 </div>
-                <div className="fkex items-center justify-between">
+                <div className="flex items-center justify-between">
                   <div className="text-green-500 underline">
                     <Link href="/projects/gowasteterms">
                       view the terms and conditions
@@ -66,18 +66,6 @@ export default function Home({
             <div>
               <Gallery gallery={gowastepics} />
             </div>
-
-            {gowaste.map((i, index) => (
-              <div
-                key={index}
-                className="bg-white p-5 shadow-lg text-black shadow-gray-400 text-xl space-x-5"
-              >
-                <p className="text-3xl font-bold py-5">
-                  User Terms and Conditions
-                </p>
-                <p>{i.cusc[0].children[0].text}</p>
-              </div>
-            ))}
           </div>
         </div>
         <div className=" px-2 md:px-10">
@@ -117,18 +105,6 @@ export default function Home({
           <div>
             <Gallery gallery={gofoodpics} />
           </div>
-
-          {gofood.map((i, index) => (
-            <div
-              key={index}
-              className="bg-white p-5 shadow-lg text-black shadow-gray-400 text-xl space-x-5"
-            >
-              <p className="text-3xl font-bold py-5">
-                User Terms and Conditions
-              </p>
-              <p>{i.cusc[0].children[4].text}</p>
-            </div>
-          ))}
         </div>
       </div>
       <Contact />
