@@ -8,7 +8,9 @@ import logo from './logo'
 import gofoodpics from './gofoodPics'
 import gowastepics from './gowastePics'
 import gowaste from './gowaste'
+import gowastepolicy from './wastepolicy'
 import gofood from './gofood'
+import gofoodpolicy from './foodprivacy'
 
 export const schemaTypes = [
   gallery,
@@ -18,7 +20,9 @@ export const schemaTypes = [
   blockContent,
   gofoodpics,
   gofood,
+  gofoodpolicy,
   gowastepics,
   gowaste,
+  gowastepolicy,
   logo,
 ]

@@ -8,7 +8,7 @@ import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 // ..
 
-const About = ({ about }) => {
+const About = () => {
   return (
     <div className="ab">
       <div
@@ -20,25 +20,18 @@ const About = ({ about }) => {
         </h1>
       </div>
       <div className="flex flex-row px-10 md:flex-nowrap flex-wrap items-center mb-10 shadow-sm shadow-gray-500 p-10 gap-x-11 justify-center">
-        {about.map((item, index) => (
-          <div
-            key={index}
-            className="flex flex-row px-10 md:flex-nowrap flex-wrap items-center mb-10 shadow-sm shadow-gray-500 gap-x-11 justify-center"
-          >
-            <div className="md:w-4/5 w-full">
-              <img
-                src={urlFor(item.image).url()}
-                alt="image"
-                className="h-[500px]  my-5  top w-full"
-              />
-            </div>
-            <div className="w-full h-full static bg-white shadow-md shadow-gray-400 px-5 py-5  rounded-lg ">
-              <div className="text-xl text-black font-semibold">
-                <p>{item.bio[0].children[0].text}</p>
-              </div>
-            </div>
+        <div className="w-full h-full static bg-white shadow-md shadow-gray-400 px-10 py-14  rounded-lg ">
+          <div className="text-xl text-black font-semibold">
+            <p>
+              With our broad investment strategy, we attend to detailed
+              sustainability in its diverse disciplines (Environmental, Climate,
+              Economical and Social). LAC Global Limited supports the
+              international vision and mission of being a key player in
+              sustainable socio-economic development, especially in the
+              developing parts of the African Region.
+            </p>
           </div>
-        ))}
+        </div>
       </div>
     </div>
   );

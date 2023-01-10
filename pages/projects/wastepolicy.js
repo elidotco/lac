@@ -36,28 +36,24 @@ export default function Home({ logo, gowaste }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header logo={logo} />
-      <Crumb name="GoWaste Terms and Conditions" />
+      <Crumb name="GoWaste Privacy Policy" />
       <div>
         <div className="px-5 text-black">
           {gowaste.map((i, index) => (
             <div key={index}>
               <div className="bg-white text-black p-5 my-10 shadow-lg shadow-gray-400 text-2xl space-x-5">
-                <p className="text-5xl font-bold py-5">
-                  User Terms and Conditions
-                </p>
+                <p className="text-5xl font-bold py-5">User Privacy Policy</p>
                 <PortableText value={i.cusc} components={ptComponents} />
               </div>
               <div className="bg-white my-10 p-5 text-black shadow-lg shadow-gray-400 text-2xl flex flex-col  justify-center items-center space-x-5">
                 <p className="text-5xl text-black font-bold py-5">
-                  Driver Terms and Conditions
+                  Driver Privacy Policy
                 </p>
 
                 <PortableText value={i.driver} components={ptComponents} />
               </div>
               <div className="bg-white my-10 p-5 shadow-lg shadow-gray-400 text-2xl space-x-5 flex flex-col  justify-center items-center">
-                <p className="text-3xl font-bold py-5">
-                  Agent Terms and Conditions
-                </p>
+                <p className="text-3xl font-bold py-5">Agent Privacy Policy</p>
 
                 <PortableText value={i.agent} components={ptComponents} />
               </div>
@@ -72,7 +68,7 @@ export default function Home({ logo, gowaste }) {
 
 export async function getStaticProps() {
   const logo = await client.fetch(groq`*[_type == "logo"]{...,}`);
-  const gowaste = await client.fetch(groq`*[_type == "gowaste"]{...,}`);
+  const gowaste = await client.fetch(groq`*[_type == "gowastepolicy"]{...,}`);
 
   return {
     props: {

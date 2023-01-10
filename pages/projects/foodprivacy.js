@@ -4,10 +4,10 @@ import Head from "next/head";
 import { Crumb } from "../../components";
 import Contact from "../../components/Contact";
 import Header from "../../components/Header";
-import { PortableText } from "@portabletext/react";
 
 import client from "../../sanity";
 import ScrollToTop from "react-scroll-to-top";
+import { PortableText } from "@portabletext/react";
 
 const ptComponents = {
   types: {
@@ -26,58 +26,62 @@ const ptComponents = {
   },
 };
 
-export default function Home({ logo, gowaste }) {
+export default function Home({
+  logo,
+
+  gofood,
+}) {
   return (
     <div className="">
-      <ScrollToTop smooth className="sc" />
       <Head>
         <title>Lac Global Limited || Current Operations</title>
         <meta name="description" content="lac global" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header logo={logo} />
-      <Crumb name="GoWaste Terms and Conditions" />
+      <Crumb name="GoFood Privacy Policy" />
       <div>
-        <div className="px-5 text-black">
-          {gowaste.map((i, index) => (
+        <div className="lg:px-10 px-5 ">
+          {gofood.map((i, index) => (
             <div key={index}>
               <div className="bg-white text-black p-5 my-10 shadow-lg shadow-gray-400 text-2xl space-x-5">
-                <p className="text-5xl font-bold py-5">
-                  User Terms and Conditions
-                </p>
+                <p className="text-5xl font-bold py-5">User Privacy Policy</p>
+
                 <PortableText value={i.cusc} components={ptComponents} />
               </div>
-              <div className="bg-white my-10 p-5 text-black shadow-lg shadow-gray-400 text-2xl flex flex-col  justify-center items-center space-x-5">
-                <p className="text-5xl text-black font-bold py-5">
-                  Driver Terms and Conditions
+              <div className="bg-white my-10 p-5  text-black shadow-lg shadow-gray-400 text-2xl  items-center justify-center flex flex-col">
+                <p className="text-5xl font-bold w-full py-5">
+                  Resturantant Privacy Policy
                 </p>
 
-                <PortableText value={i.driver} components={ptComponents} />
+                <PortableText value={i.rsc} components={ptComponents} />
               </div>
-              <div className="bg-white my-10 p-5 shadow-lg shadow-gray-400 text-2xl space-x-5 flex flex-col  justify-center items-center">
-                <p className="text-3xl font-bold py-5">
-                  Agent Terms and Conditions
+              <div className="bg-white my-10 p-5  text-black shadow-lg shadow-gray-400 text-2xl  items-center justify-center flex flex-col">
+                <p className="text-5xl font-bold w-full py-5">
+                  Courier Privacy Policy
                 </p>
 
-                <PortableText value={i.agent} components={ptComponents} />
+                <PortableText value={i.cosc} components={ptComponents} />
               </div>
             </div>
           ))}
         </div>
       </div>
       <Contact />
+      <ScrollToTop smooth className="sc" />
     </div>
   );
 }
 
 export async function getStaticProps() {
   const logo = await client.fetch(groq`*[_type == "logo"]{...,}`);
-  const gowaste = await client.fetch(groq`*[_type == "gowaste"]{...,}`);
+  const gofood = await client.fetch(groq`*[_type == "gofoodprivacy"]{...,}`);
 
   return {
     props: {
       logo,
-      gowaste,
+
+      gofood,
     }, // will be passed to the page component as props
   };
 }

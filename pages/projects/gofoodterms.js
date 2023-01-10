@@ -7,6 +7,24 @@ import Header from "../../components/Header";
 
 import client from "../../sanity";
 import ScrollToTop from "react-scroll-to-top";
+import { PortableText } from "@portabletext/react";
+
+const ptComponents = {
+  types: {
+    image: ({ value }) => {
+      if (!value?.asset?._ref) {
+        return null;
+      }
+      return (
+        <img
+          alt={value.alt || " "}
+          loading="lazy"
+          src={urlFor(value).width(320).height(240).fit("max").auto("format")}
+        />
+      );
+    },
+  },
+};
 
 export default function Home({
   logo,
@@ -26,17 +44,19 @@ export default function Home({
         <div className="lg:px-10 px-5 ">
           {gofood.map((i, index) => (
             <div key={index}>
-              <div className="bg-white text-black p-5 my-10 shadow-lg shadow-gray-400 text-xl space-x-5">
-                <p className="text-3xl font-bold py-5">
+              <div className="bg-white text-black p-5 my-10 shadow-lg shadow-gray-400 text-2xl space-x-5">
+                <p className="text-5xl font-bold py-5">
                   User Terms and Conditions
                 </p>
-                <p>{i.cusc[0].children[4].text}</p>
+
+                <PortableText value={i.cusc} components={ptComponents} />
               </div>
-              <div className="bg-white my-10 p-5  text-black shadow-lg shadow-gray-400 text-xl space-x-5">
-                <p className="text-3xl font-bold py-5">
+              <div className="bg-white my-10 p-5  text-black shadow-lg shadow-gray-400 text-2xl  items-center justify-center flex flex-col">
+                <p className="text-5xl font-bold w-full py-5">
                   Resturantant Terms and Conditions
                 </p>
-                <p>{i.rsc[0].children[0].text}</p>
+
+                <PortableText value={i.rsc} components={ptComponents} />
               </div>
             </div>
           ))}

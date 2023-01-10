@@ -49,10 +49,17 @@ export default function Home({
                     <FaAppStore size={35} color="green" />
                   </a>
                 </div>
-                <div className="text-green-500 underline">
-                  <Link href="/projects/gowasteterms">
-                    view the terms and conditions
-                  </Link>
+                <div className="fkex items-center justify-between">
+                  <div className="text-green-500 underline">
+                    <Link href="/projects/gowasteterms">
+                      view the terms and conditions
+                    </Link>
+                  </div>
+                  <div className="text-green-500 underline">
+                    <Link href="/projects/wastepolicy">
+                      view the privacy policy
+                    </Link>
+                  </div>
                 </div>
               </div>
             ))}
@@ -93,10 +100,17 @@ export default function Home({
                   <FaAppStore size={35} color="green" />
                 </a>
               </div>
-              <div className="text-green-500 underline">
-                <Link href="/projects/gowasteterms">
-                  view the terms and conditions
-                </Link>
+              <div className="flex items-center  justify-between">
+                <div className="text-green-500 underline">
+                  <Link href="/projects/gofoodterms">
+                    view the terms and conditions
+                  </Link>
+                </div>
+                <div className="text-green-500 underline">
+                  <Link href="/projects/foodprivacy">
+                    view the privacy policy
+                  </Link>
+                </div>
               </div>
             </div>
           ))}
