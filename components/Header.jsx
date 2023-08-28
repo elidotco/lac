@@ -14,7 +14,7 @@ const Header = ({ logo }) => {
 
     { name: "Current Operations", path: "/projects" },
     { name: "Contact", path: "/contact" },
-    { name: "Impressum", path: "https://gofood.lacglobalimited.com" },
+    { name: "Impressum", path: "https://gofood.lacgloballimited.com/impressum" },
   ];
 
   function closeModal() {
