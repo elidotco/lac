@@ -126,6 +126,8 @@ export async function getStaticProps() {
       gowastepics,
       gofood,
       gofoodpics,
-    }, // will be passed to the page component as props
+    },
+    revalidate:10,
+    // will be passed to the page component as props
   };
 }
