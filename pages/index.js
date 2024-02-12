@@ -46,6 +46,8 @@ export async function getStaticProps() {
   const logo = await client.fetch(groq`*[_type == "logo"]{...,}`);
 
   return {
-    props: { team, about, gallery, services, logo }, // will be passed to the page component as props
+    props: { team, about, gallery, services, logo },
+    revalidate:10,
+    // will be passed to the page component as props
   };
 }
